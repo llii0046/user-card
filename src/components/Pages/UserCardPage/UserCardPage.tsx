@@ -65,8 +65,7 @@ const UserCardPage: React.FC = () => {
 
   useEffect(() => {
     handleFilter(userInformation);
-  }),
-    [userInformation];
+  }, [userInformation,selectedFilter]);
 
   const handleClick = () => {
     request();

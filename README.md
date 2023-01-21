@@ -10,7 +10,9 @@ npm run dev
 
 Open http://localhost:3000 with your browser to see the result.
 
-👉  Live demo : user-card-gilt.vercel.app
+👉  Live demo : http://user-card-gilt.vercel.app
+
+👉  Data source : https://randomuser.me/
 
 
 
