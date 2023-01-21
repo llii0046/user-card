@@ -48,8 +48,11 @@ const UserCardPage: React.FC = () => {
 
     useEffect(() => {
         setFilteredUserInformation(userInformation)
-        handleFilter()
     }, [userInformation])
+
+    useEffect(() => {
+        handleFilter()
+    }, [filteredUserInformation, selectedFilter])
 
     const handleClick = () => {
         request();
@@ -85,10 +88,6 @@ const UserCardPage: React.FC = () => {
             }
         }
     };
-
-    useEffect(() => {
-        handleFilter();
-    }, [selectedFilter]);
 
     return (
         <Layout>
