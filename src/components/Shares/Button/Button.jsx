@@ -6,7 +6,6 @@ const { textColor} = color;
 const Button = styled.button`
     background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
     flex: 1 1 auto;
-    margin: 10px;
     padding: 20px 40px;
     text-align: center;
     text-transform: uppercase;
