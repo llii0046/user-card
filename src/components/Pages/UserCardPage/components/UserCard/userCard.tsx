@@ -10,14 +10,15 @@ interface UserCardProps {
 }
 
 const CardContainer = styled.div`
-  padding: 30px 50px;
-  width: 350px;
+  padding: 30px;
+  min-width: 320px;
+  flex: 0.5 1 20% ;
   height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 30px;
-  box-shadow: 0 0 0 2px ${shadowColor};
+  box-shadow: 0 0 20px 2px ${shadowColor};
 
   &:hover {
     box-shadow: -16px 16px 32px 0 ${floatShadow};
