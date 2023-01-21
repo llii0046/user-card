@@ -1,10 +1,10 @@
-import type { NextPage } from 'next';
-import UserCardPage from '@/components/Pages/UserCardPage';
+import type { NextPage } from "next";
+import UserCardPage from "@/components/Pages/UserCardPage";
 
 const Home: NextPage = () => (
-    <>
-      <UserCardPage/>
-    </>
-  );
+  <>
+    <UserCardPage />
+  </>
+);
 
 export default Home;

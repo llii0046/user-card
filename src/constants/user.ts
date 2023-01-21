@@ -1,5 +1,4 @@
 export enum EUserSex {
-    MALE = 'male',
-    FEMALE = 'female'
+  MALE = "male",
+  FEMALE = "female",
 }
-

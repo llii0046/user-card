@@ -1,11 +1,7 @@
-export const USER_GENDER_FILTER = [
-    'male',
-    'female',
-    'all'
-];
+export const USER_GENDER_FILTER = ["male", "female", "all"];
 
 export enum EGenderOptions {
-	MALE = 'male',
-	FEMALE = 'female',
-	ALL = 'all',
+  MALE = "male",
+  FEMALE = "female",
+  ALL = "all",
 }

@@ -1,1 +1,1 @@
-export {default} from './GenderFilter';
+export { default } from "./GenderFilter";
