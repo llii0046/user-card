@@ -24,6 +24,8 @@ const devices: IDevices = {
 const color: IColor = {
 	textColor: '#202842',
 	lightTextColor: '#8C8F97' ,
+	shadowColor: '#ECEFF9',
+	floatShadow: '#c7c4c4'
 };
 
 const headerHeight = '100px';

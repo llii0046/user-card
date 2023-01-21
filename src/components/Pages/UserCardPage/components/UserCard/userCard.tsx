@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { color, devices } from '@/styles/variables';
 
-const { textColor, lightTextColor } = color;
+const { textColor, lightTextColor, shadowColor, floatShadow } = color;
 
 interface UserCardProps {
     picture: string;
@@ -17,7 +17,13 @@ const CardContainer = styled.div`
     flex-direction: column;
     align-items: center;
     border-radius: 30px;
-    border:1px solid #000;
+    box-shadow: 0 0 0 2px ${shadowColor};
+
+    &:hover {
+		box-shadow: -16px 16px 32px 0 ${floatShadow};
+		transform: translate(5px, -5px);
+		transition-duration: 0.4s;
+	}
 `
 
 const ImageContainer = styled.div`
