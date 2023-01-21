@@ -40,17 +40,21 @@ const UserCardPage: React.FC = () => {
     const request = () => {
         axios.get(`https://randomuser.me/api/?results=12`)
             .then(res => {
-                setUserInformation(res.data.results)
+                setUserInformation(res.data.results);
             });
     }
 
     useEffect(() => {
-        request()
+        request();
     }, []);
+
+    useEffect(() => {
+        setFilteredUserInformation(userInformation)
+        handleFilter()
+    }, [userInformation])
 
     const handleClick = () => {
         request();
-        handleFilter();
     }
 
     const getMaleUserList = (userInformation: IUserInformation[]) => {
@@ -93,7 +97,7 @@ const UserCardPage: React.FC = () => {
             <GenderFilter setSelectedFilter={setSelectedFilter} />
             <Button onClick={handleClick}>Reload</Button>
             <CardsContainer>
-                {filteredUserInformation.map(({ picture, name, email }) => (
+                {filteredUserInformation?.map(({ picture, name, email }) => (
                     < UserCard key={email} picture={picture.large} name={`${name.first} ${name.last}`} email={email} />
                 ))}
             </CardsContainer>
