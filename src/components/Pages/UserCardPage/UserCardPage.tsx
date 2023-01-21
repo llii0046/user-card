@@ -24,14 +24,14 @@ const CardsContainer = styled.div`
 `
 
 const UserCardPage: React.FC = () => {
-    const [userInformation, setUserInformation] = useState<[IUserInformation]>([{
+    const [userInformation, setUserInformation] = useState<IUserInformation[]>([{
         picture: { large: 'Loading', medium: '', thumbnail: '' },
         name: { title: '', first: '', last: '' },
         email: '',
         gender: ''
     }]);
 
-    const [filteredUserInformation, setFilteredUserInformation] = useState<[IUserInformation]>(userInformation);
+    const [filteredUserInformation, setFilteredUserInformation] = useState<IUserInformation[]>(userInformation);
 
     const [selectedFilter, setSelectedFilter] = useState<number>(2);
 
@@ -51,7 +51,7 @@ const UserCardPage: React.FC = () => {
     }, [userInformation])
 
     useEffect(() => {
-        handleFilter()
+        handleFilter(userInformation);
     }, [filteredUserInformation, selectedFilter])
 
     const handleClick = () => {
@@ -70,7 +70,7 @@ const UserCardPage: React.FC = () => {
         return femaleUserList;
     };
 
-    const handleFilter = () => {
+    const handleFilter = (userInformation: IUserInformation[]) => {
         if (!isEmpty(userInformation)) {
             switch (USER_GENDER_FILTER[selectedFilter]) {
                 case EGenderOptions.MALE:
