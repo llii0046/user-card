@@ -8,8 +8,6 @@ import GenderFilter from './components/GenderFilter';
 import { EUserSex } from '@/constants/user';
 import { isEmpty } from 'lodash';
 import { EGenderOptions, USER_GENDER_FILTER } from '@/constants/userGenderFilter';
-
-
 const Layout = styled.div`
     display: flex;
     flex-direction: column;

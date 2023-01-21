@@ -30,7 +30,8 @@ const ImageContainer = styled.div`
     width:100px;
     height:100px;
     border-radius:50%;
-    overflow:hidden
+    overflow:hidden;
+    box-shadow: 0 16px 32px 0 ${floatShadow};
 `
 
 const Name = styled.p`
@@ -64,7 +65,7 @@ const UserCard: React.FC<UserCardProps> = props => {
     return (
         <CardContainer>
             <ImageContainer >
-                <img src={`${picture}`} alt="Loading" width="100" height="100"/>
+                <img src={`${picture}`} alt="Loading" width="100" height="100" />
             </ImageContainer >
             <Name>{name}</Name>
             <Email>{email}</Email>
