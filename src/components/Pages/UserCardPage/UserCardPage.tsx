@@ -11,6 +11,7 @@ import {
   EGenderOptions,
   USER_GENDER_FILTER,
 } from "@/constants/userGenderFilter";
+import UserPagination from "./components/Pagination/UserPagination";
 
 const Layout = styled.div`
   display: flex;
@@ -50,9 +51,17 @@ const UserCardPage: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<number>(2);
 
   const request = () => {
-    axios.get(`https://randomuser.me/api/?results=12`).then((res) => {
+    axios.get(`https://randomuser.me/api/?page=3&results=12`).then((res) => {
       setUserInformation(res.data.results);
     });
+  };
+
+  const requestWithSeed = (seed: number) => {
+    axios
+      .get(`https://randomuser.me/api/?page=3&results=12&seed=${seed}`)
+      .then((res) => {
+        setUserInformation(res.data.results);
+      });
   };
 
   useEffect(() => {
@@ -65,10 +74,14 @@ const UserCardPage: React.FC = () => {
 
   useEffect(() => {
     handleFilter(userInformation);
-  }, [userInformation,selectedFilter]);
+  }, [userInformation, selectedFilter]);
 
   const handleClick = () => {
     request();
+  };
+
+  const handleSwapPage = (pageNumber: number) => {
+    requestWithSeed(pageNumber);
   };
 
   const getMaleUserList = (userInformation: IUserInformation[]) => {
@@ -120,6 +133,7 @@ const UserCardPage: React.FC = () => {
           />
         ))}
       </CardsContainer>
+      <UserPagination handleSwapPage={handleSwapPage} />
     </Layout>
   );
 };

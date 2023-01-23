@@ -26,6 +26,7 @@ const color: IColor = {
   lightTextColor: "#8C8F97",
   shadowColor: "#ECEFF9",
   floatShadow: "#c7c4c4",
+  whiteColor: "#fff"
 };
 
 const headerHeight = "100px";

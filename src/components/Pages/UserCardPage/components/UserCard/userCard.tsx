@@ -11,7 +11,7 @@ interface UserCardProps {
 
 const CardContainer = styled.div`
   padding: 30px 50px;
-  width: 350px;;
+  width: 350px;
   height: 350px;
   display: flex;
   flex-direction: column;
