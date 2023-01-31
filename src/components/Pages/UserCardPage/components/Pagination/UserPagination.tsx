@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import { color } from "@/styles/variables";
 
@@ -30,7 +29,6 @@ const Pagination = styled.button`
 `;
 
 const UserPagination: React.FC<UserPaginationProps> = (props) => {
-  const [pageNumber, SetPageNumber] = useState<number>();
   const { handleSwapPage } = props;
   return (
     <Container>
