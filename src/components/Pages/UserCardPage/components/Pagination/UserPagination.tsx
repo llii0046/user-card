@@ -32,11 +32,11 @@ const UserPagination: React.FC<UserPaginationProps> = (props) => {
   const { handleSwapPage } = props;
   return (
     <Container>
-      <Pagination>&laquo;</Pagination>
+      {/* <Pagination>&laquo;</Pagination> */}
       <Pagination onClick={() => handleSwapPage(1)}>1</Pagination>
       <Pagination onClick={() => handleSwapPage(2)}>2</Pagination>
       <Pagination onClick={() => handleSwapPage(3)}>3</Pagination>
-      <Pagination >&raquo;</Pagination>
+      {/* <Pagination >&raquo;</Pagination> */}
     </Container>
   );
 };
